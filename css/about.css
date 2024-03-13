@@ -1,0 +1,53 @@
+
+.sectioner-header p {
+	color:#818992;/*color*/
+	font-size: 17px;
+}
+.section-content {
+	margin-top: 80px;
+}
+.icon-box {
+	margin-bottom:50px;
+}
+.icon-box i {
+	display: block;
+	position: relative;
+	width: 135px;
+	height: 135px;
+	border-radius: 50%;
+background: #ffffff;/*bg-color*/
+box-shadow:  21px 21px 61px #a6a6a6,
+             -21px -21px 61px #ffffff;/*box-color*/
+	color: #383838;/*color*/
+	font-size: 50px;
+	line-height: 135px;
+	margin: 0 auto;
+	z-index: -100;
+}
+.icon-box i:hover{
+	color: 0 0 15px #2d2d2d;/*color*/
+	box-shadow: 0 0 15px #2d2d2d;/*box-color*/
+}
+.icon-box h5 {
+	margin-top:30px;
+}
+.icon-box p {
+	color: #818992;/*color*/
+	font-size: 14px;
+	width: 80%;
+	margin: 0 auto;
+}
+.about-btn {
+	color: #049f57;/*color*/
+	padding: 10px 40px;
+	border: 2px solid #049f57;/*border-color*/
+	border-radius: 7px;
+	margin-top: 30px;
+	display: inline-block;
+	font-size: 18px;
+}
+.about-btn:hover {
+	background:#049f57;/*bg-color*/
+	color:#ffffff;/*color*/
+	text-decoration:none;
+}
