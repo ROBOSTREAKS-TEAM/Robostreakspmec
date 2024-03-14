@@ -131,6 +131,8 @@
 		position:absolute;
 
 		}
+
+
 		@media screen and (max-width: 480px) {
 
 					#contact,#events,#sponsors h1{
@@ -593,14 +595,34 @@
     width: 960px;
     height: 300px;
     margin: 0 auto;
-		padding-top: 50px;
+	margin-top: -130px;
+		/* padding-top: 50px; */
 
 	                      /* add this to get responsive for media screen 320px padding-top: 50px; */
 
 }
-@media screen and (max-width: 4000px){
+.top-img{
+	width: 180px;
+	height: 180px;
+	display: flex;
+	justify-content: center;
+	margin-left: 43%;
+	margin-right: 47%;
+	/* align-content:center; */
+}
+@media screen and (max-width: 780px){
 	svg{
 		width: 380px;
+		height: 180px;
+		margin-top: -70px;
+		
+	}
+	.top-img{
+		width: 120px;
+		height: 120px;
+		margin-left: 34%;
+		/* margin-bottom: -50px; */
+		/* margin-top: -150px; */
 	}
 	
 }
@@ -783,8 +805,12 @@ color: yellow;
 				<!--by mvs -->
 <div class="container">
 	<div class="row">
+	<div class="top-img">
+		<img src="images/PMEC.png" alt="pmec">
+		<img src="images/Robostreaks Logo li.png" alt="robostreaks">
+	</div>
 	<svg viewBox="0 0 1460 500">   <!-- here make 500 to 280 for larger one-->
-    <symbol id="s-text" style="@media (max-width:780px) {width: 950px}">
+    <symbol id="s-text" >
 		<text text-anchor="middle" x="50%" y="80%"> ROBOMANIA-2k24 </text>
 	</symbol>
 
