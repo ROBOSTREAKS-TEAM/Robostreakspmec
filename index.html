@@ -416,6 +416,26 @@ COOPERATION, SINCERITY AND LEADERSHIP SKILLS.</p>
 ©2023 &nbsp;<a href="#"><span>Robostreaks</span></a> | all rights reserved.
 </footer>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  function sendEmail(){   
+
+      Email.send({
+          Host : "smtp.gmail.com",
+          Username : "robostreaks.pmec@gmail.com",
+          Password : "elerstkizfxnljdr",
+          To : 'robostreaks.pmec@gmail.com',
+          //From : document.getElementById('email').value,
+          From : 'robostreaks.pmec@gmail.com',
+          Subject : document.getElementById('subject').value,
+          Body : document.getElementById('email').value + document.getElementById('message').value + "<br><br>"+ "&nbsp;&nbsp;&nbsp;&nbsp;-" + document.getElementById('your_name').value,
+      }).then(
+        message => alert(message)
+      );
+  }
+
+</script>
+
     
   </body>
 </html>
