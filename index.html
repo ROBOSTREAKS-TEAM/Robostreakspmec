@@ -41,7 +41,6 @@
         <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
         
   </head>
   <body>
@@ -66,32 +65,7 @@
           </div>
         </nav>
 </header>
-<script> 
-  var el_up = document.getElementById('GFG_UP'); 
-  var rgbValue = [255, 0, 0]; 
-  el_up.innerHTML = 
-  "Click on the button to select effective pattern."; 
-    
-  function setColor() { 
-      rgbValue[0] = Math.round(Math.random() * 255); 
-      rgbValue[1] = Math.round(Math.random() * 255); 
-      rgbValue[2] = Math.round(Math.random() * 255); 
-      var color = Math.round(((parseInt(rgbValue[0]) * 299) + 
-          (parseInt(rgbValue[1]) * 587) + 
-          (parseInt(rgbValue[2]) * 114)) / 1000); 
-      var textColor = (color > 125) ? 'black' : 'white'; 
-      var backColor = 
-          'rgb(' + rgbValue[0] + ', ' + rgbValue[1] + ', ' 
-      + rgbValue[2] + ')'; 
-        
-      $('#backG').css('color', textColor); 
-      $('#backG').css('background-color', backColor); 
-  } 
-    
-  function GFG_Fun() { 
-      setColor(); 
-  } 
-</script>
+
 
 <!-- Home page start -->
     <section id="home" class="home"  >
