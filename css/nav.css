@@ -10,9 +10,7 @@
   justify-content: space-around;
 }
 
-a {
-  color: #000;
-}
+
 
 /* header */
 
@@ -40,7 +38,7 @@ a {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: #f4f4f4;
+  color: orange;
 }
 
 .header .logo {
@@ -243,8 +241,9 @@ a {
       } 
       .header a{
         text-decoration: none ;
-        color:#ffffff;
+        color:#ffffff;    /* important */
         transition:0.3s;
+        mix-blend-mode: difference;
       }
       .logo {
         display: flex;
@@ -303,16 +302,27 @@ a {
         cursor: pointer;
         display: none;
         position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 25rem;
-    z-index: 2;
-    -webkit-transition: .3s all ease-in-out;
-    -o-transition: .3s all ease-in-out;
-    transition: .3s all ease-in-out; 
+        top: 0;
+        width: 100%;
+        padding: 20px 25rem;
+        z-index: 2;
+        -webkit-transition: .3s all ease-in-out;
+        -o-transition: .3s all ease-in-out;
+        transition: .3s all ease-in-out; 
       }
       
-
+      section:nth-child(1){
+        background: #fff;
+      }
+      section:nth-child(2){
+        background: #000;
+      }
+      section:nth-child(3){
+        background: #000;
+      }
+      section:nth-child(4){
+        background: #fff;
+      }
 
 }
 
