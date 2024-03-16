@@ -37,10 +37,12 @@
     <link rel="shortcut icon" type="x-icon" href="images/Robostreaks Logo li.png">
 
         <!-------------------------- JS -------------------------->
-        <script src="js/main.js"></script>
+        
         <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script> 
+        <script src="js/main.js"></script>
         
   </head>
   <body>
@@ -48,23 +50,24 @@
         <!-------------------------- Header Area -------------------------->        
         <nav class="header-area">
           <div class="container">
-            <header class="header">
+                <header class="header">
                   <a href="" class="logo"><img src="images/ROBOSTREAKS COLOUR.png" alt="" class="signature"></a>
-                    <input class="menu-btn" type="checkbox" id="menu-btn" />
-                    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-                    <ul class="menu">
-                      <li><a href="#home">Home</a></li>
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#wings">Wings</a></li>
-                      <li><a href="#team" >Team</a></li>
-                      <li><a href="Robomania-2k24/index.html" target="_blank">Robomania-2K24</a></li>
-                      <li><a href="#testimonials">Testimonials</a></li>
-                      <li><a href="#contact">Contact</a></li>
+                  <!-- <input class="menu-btn" type="checkbox" id="menu-btn" /> -->
+                  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                  <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#wings">Wings</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="Robomania-2k24/index.html" target="_blank">Robomania-2K24</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
                   </ul>
-            </header>
-          </div>
+                </header>
+          </div> 
         </nav>
-</header>
+
+        
 
 
 <!-- Home page start -->
@@ -197,7 +200,7 @@
 
 <!-- Team start -->
 
-<section class="team" style="margin-top: 7rem;">
+<section class="team" id="team" style="margin-top: 7rem;">
     <h1 class="heading" style="margin-top: -1.5rem;" id="team">our team</h1>
     <span class="line"></span>
     <p></p>
@@ -361,7 +364,7 @@ COOPERATION, SINCERITY AND LEADERSHIP SKILLS.</p>
           <div class="section-content">
             <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-8">
-                <form id="contact_form" action="">
+                <form id="contact_form" action="" method="post">
                   <div class="row">
                     <div class="col">
                       <input type="text" id="your_name" class="form-input w-100" name="full-name" placeholder="Full Name" required>
@@ -372,7 +375,7 @@ COOPERATION, SINCERITY AND LEADERSHIP SKILLS.</p>
                   </div>
                   <input type="text" id="subject" class="form-input w-100" name="subject" placeholder="Subject">
                   <textarea class="form-input w-100" id="message" placeholder="Message" name="message"></textarea>
-                  <button class="btn-grad w-100 text-uppercase"  type="submit" name="button">submit</button>
+                  <button class="btn-grad w-100 text-uppercase" style="margin: 2vmax;"  type="submit" name="button" value="Send Email" onclick="sendEmail()">submit</button>
                 </form>
               </div>
               <div class="col-sm-12 col-md-12 col-lg-4">
@@ -419,25 +422,47 @@ COOPERATION, SINCERITY AND LEADERSHIP SKILLS.</p>
 ©2023 &nbsp;<a href="#"><span>Robostreaks</span></a> | all rights reserved.
 </footer>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
+<!-- <script type="text/javascript">
   function sendEmail(){   
-
       Email.send({
           Host : "smtp.gmail.com",
           Username : "robostreaks.pmec@gmail.com",
           Password : "elerstkizfxnljdr",
           To : 'robostreaks.pmec@gmail.com',
-          //From : document.getElementById('email').value,
-          From : 'robostreaks.pmec@gmail.com',
+          From : document.getElementById('email').value,
+          // From : 'robostreaks.pmec@gmail.com',
+          // From : 'purnimaprusty2003@gmail.com',
           Subject : document.getElementById('subject').value,
           Body : document.getElementById('email').value + document.getElementById('message').value + "<br><br>"+ "&nbsp;&nbsp;&nbsp;&nbsp;-" + document.getElementById('your_name').value,
-      }).then(
-        message => alert(message)
-      );
+      }).then(function (message) {
+              alert("mail sent successfully")
+          });
   }
 
+</script> -->
+
+<script type="text/javascript">
+  function sendEmail() {
+      Email.send({
+          Host: "smtp.gmail.com",
+          Username: "purnimaprusty2003@gmail.com",
+          Password: "1234mnop",
+          To: "purnimaprusty2003@gmail.com",
+          From: "purnimaprusty2003@gmail.com",
+          Subject: "Sending Email using javascript",
+          Body: "Well that was easy!!",
+      })
+          .then(function (message) {
+              alert("mail sent successfully")
+          });
+  }
 </script>
+
+<!-- <script>
+  function sendEmail(){
+  message=document.getElementById("email").value;
+  alert(message);}
+</script> -->
 
     
   </body>
