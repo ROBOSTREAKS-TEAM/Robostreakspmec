@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> REGISTRATION FORM </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="x-icon" href="Robostreaks Logo li.png">
+
+  </head>
+    <body>
+    <div class="container">
+    <div class="title"style="text-align: center;">REGISTRATION FORM</div>
+    <div class="content">
+    <div class="user-details">
+        <div class="input-box">
+          <form id="uploadForm" action="https://script.google.com/macros/s/AKfycbzdS8eOk2nAJdCdswrOeMqJyndEiFUneQcqleZo8gW1pUdmioQeA-aeFxgiaHf03KaIdQ/exec" method="POST">
+          <input type="hidden" value="" name="fileContent" id="fileContent">
+          <input type="hidden" value="" name="filename" id="filename">
+          <div class="user-details">
+          <div class="input-box">
+             <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+          </div>
+        <div class="input-box">
+            <label for="gender" class="form-label">Gender</label>
+            <select type="gender" id="gender" name="gender" class="form-control" placeholder="Select Gender " required>
+                <option>--Select Gender--</option>
+                <option>Men</option>
+                <option>Women</option>
+                <option>Prefer not to say</option>
+            </select>
+            </div>
+            <div class="input-box">
+              <label for="RNO" class="form-label">ROLL / REGISTRATION NUMBER</label>
+                <input type="text" id="RNO" name="RNO" class="form-control" placeholder="Enter your phone number " required>
+              </div>
+         <div class="input-box">
+            <label for="WNO" class="form-label">Whatsapp Number</label>
+              <input type="number" id="WNO" name="WNO" class="form-control" placeholder="Enter your Whatsapp Number" required>
+            </div>
+            <div class="input-box">
+              <label for="email" class="form-label">Email</label>
+                <input type="text" id="email" name="email" class="form-control" placeholder="Enter your Email Address " required>
+              </div>
+              <div class="input-box">
+                <label for="Semester" class="form-label">Semester</label>
+                <select type="Semester" id="Semester" name="Semester" class="form-control" placeholder="Select Semester " required>
+                    <option>--Select Semester--</option>
+                    <option>1st SEMESTER</option>
+                    <option>2nd SEMESTER</option>
+                </select>
+                </div>
+                <div class="input-box">
+                  <label for="Branch" class="form-label">Branch</label>
+                  <select type="Branch" id="Branch" name="Branch" class="form-control" placeholder="Select Branch " required>
+                      <option>--Select Branch--</option>
+                      <option>COMPUTER SCIENCE AND ENGINEERING</option>
+                      <option>ELECTRONICS AND TELECOMMUNICATION ENGINEERING</option>
+                      <option>ELECTRICAL ENGINEERING</option>
+                      <option>MECHANICAL ENGINEERING</option>
+                      <option>CIVIL ENGINEERING</option>
+                      <option>AUTOMOBILE ENGINEERING</option>
+                      <option>CHEMICAL ENGINEERING</option>
+                      <option>METALLURGICAL AND MATERIAL ENGINEERING</option>
+                  </select>
+                  </div>
+        
+        <div class="input-box">
+            <label for="file" class="form-label"> File</label>
+            <input required id="attach" name="attach" type="file"/>
+            </div>
+        <div class="button"style="width: 100%;">
+            <input type="button" value="SUBMIT" onclick="UploadFile();" />
+            </div>
+            <div>
+              <button class="btn btn-danger" type="reset">RESET FORM</button>
+           </div>
+    <script>
+    function UploadFile() {
+    var reader = new FileReader();
+    var file = document.getElementById('attach').files[0];
+    reader.onload = function(){
+    document.getElementById('fileContent').value=reader.result;
+    document.getElementById('filename').value=file.name;
+    document.getElementById('uploadForm').submit();
+    }
+    reader.readAsDataURL(file);
+    }
+    </script>
+</body>
+</html>
